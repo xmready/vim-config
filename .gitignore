@@ -1,0 +1,17 @@
+# ignore swap files
+*.swp
+
+# ignore Session.vim
+Session.vim
+
+# ignore netrw file
+.netrw*
+
+# ignore old files
+*.old
+
+# ignore directories
+autoload/
+plugged/
+swap/
+view/
