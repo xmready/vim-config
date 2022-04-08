@@ -2,7 +2,7 @@
 
 echo -e "\n$(tput setaf 3)installing vim and dependencies\n$(tput sgr0)" \
 && sudo apt update \
-&& sudo apt install wget curl vim-nox python3-dev mono-complete golang nodejs default-jdk npm \
+&& sudo apt install wget curl vim-nox build-essential cmake python3-dev mono-complete golang nodejs default-jdk npm \
 && echo -e "\n$(tput setaf 2)packages installed\n$(tput sgr0)" \
 && sleep 3 \
 
