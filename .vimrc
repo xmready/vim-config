@@ -12,7 +12,7 @@ call plug#end()
 " User Defined Global Options
 set hidden
 set number
-set directory=$HOME/gdrive/Coding/swap//
+set directory=$HOME/gdrive/coding/swap//
 let g:ycm_semantic_triggers = { 'html,css,vim': ['re!.'] }
 
 " User Defined Global Maps
