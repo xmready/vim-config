@@ -38,6 +38,7 @@ nmap ,i 1<C-G>
 nmap ,l Go
 nmap ,k Go<CR>
 nmap ,s :w<CR>
+nmap ,u :u0<CR>
 imap ,s <ESC>:w<CR>
 imap ,q <ESC>
 imap ,k <ESC>Go<CR>
@@ -66,6 +67,6 @@ augroup filetype_css
 	autocmd FileType css setl tabstop=2
 	autocmd FileType css setl shiftwidth=2
 	autocmd FileType css setl expandtab
-	autocmd FileType css imap <buffer> ,. {<Esc>o}<Esc>O
+	autocmd FileType css imap <buffer> ,. <Space>{<Esc>o}<Esc>O
 	autocmd FileType css imap <buffer> ,, /*<Space><Space>*/<Esc>F<Space>i
 augroup END
