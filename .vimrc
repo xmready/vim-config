@@ -73,6 +73,11 @@ augroup filetype_css
 	autocmd FileType css setl tabstop=2
 	autocmd FileType css setl shiftwidth=2
 	autocmd FileType css setl expandtab
+	autocmd FileType css nmap <buffer> ,x I/*<Esc>A*/<Esc>
+	autocmd FileType css nmap <buffer> ,z ^xx$xx
+	autocmd FileType css imap <buffer> ,c /*<Space><Space>*/<Esc>F<Space>i
+	autocmd FileType css imap <buffer> ,, <Space>;<Esc>i
 	autocmd FileType css imap <buffer> ,. <Space>{<Esc>o}<Esc>O
-	autocmd FileType css imap <buffer> ,, /*<Space><Space>*/<Esc>F<Space>i
+	autocmd FileType css imap <buffer> ,' ""<Esc>i
+	autocmd FileType css imap <buffer> ,9 ()<Esc>i
 augroup END
