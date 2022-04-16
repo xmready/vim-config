@@ -58,10 +58,14 @@ augroup filetype_html
 	autocmd FileType html setl tabstop=2
 	autocmd FileType html setl shiftwidth=2
 	autocmd FileType html setl expandtab
-	autocmd FileType html imap <buffer> ,/ ></<C-X><C-O><Esc>F<i
+	autocmd FileType html nmap <buffer> ,x I<!--<Esc>A--><Esc>
+	autocmd FileType html nmap <buffer> ,z ^xxxx$xxx
+	autocmd FileType html imap <buffer> ,c <!--<Space><Space>--><Esc>F<Space>i
+	autocmd FileType html imap <buffer> ,, ></<C-X><C-O><Esc>F<i
 	autocmd FileType html imap <buffer> ,. ><Esc>o<C-D></<C-X><C-O><Esc>O
-	autocmd FileType html imap <buffer> ,, </<C-X><C-O><Esc>
+	autocmd FileType html imap <buffer> ,/ </<C-X><C-O><Esc>
 	autocmd FileType html imap <buffer> ,m <Space>/><Esc>
+	autocmd FileType html nmap <buffer> ,t :0read ~/.vim/templates/skeleton.html<CR>
 augroup END
 
 augroup filetype_css
