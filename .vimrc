@@ -41,6 +41,8 @@ nmap ,s :w<CR>
 nmap ,u :u0<CR>
 imap ,s <ESC>:w<CR>
 imap ,q <ESC>
+imap ,o <ESC>o
+imap ,O <ESC>O
 imap ,k <ESC>Go<CR>
 imap ,p <C-R>"
 
