@@ -5,7 +5,7 @@ source $VIMRUNTIME/defaults.vim
 call plug#begin('~/.vim/plugged')
 
 Plug 'ycm-core/YouCompleteMe'
-Plug 'preservim/nerdtree'
+Plug 'lambdalisue/fern.vim'
 
 call plug#end()
 
@@ -16,7 +16,7 @@ set directory=$HOME/gdrive/coding/swap//
 let g:ycm_semantic_triggers = { 'html,css,vim': ['re!.'] }
 
 " User Defined Global Maps
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <silent> <C-N> :Fern . -drawer -reveal=% -toggle<CR>
 nmap ,- 5<C-W><
 nmap ,= 5<C-W>>
 nmap ,0 <C-W>=
