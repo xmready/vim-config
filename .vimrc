@@ -61,10 +61,12 @@ augroup filetype_html
 	autocmd FileType html nmap <buffer> ,x I<!--<Esc>A--><Esc>
 	autocmd FileType html nmap <buffer> ,z ^xxxx$xxx
 	autocmd FileType html imap <buffer> ,c <!--<Space><Space>--><Esc>F<Space>i
-	autocmd FileType html imap <buffer> ,, ></<C-X><C-O><Esc>F<i
+	autocmd FileType html imap <buffer> ,, <Esc>A></<C-X><C-O><Esc>F<i
 	autocmd FileType html imap <buffer> ,. ><Esc>o<C-D></<C-X><C-O><Esc>O
 	autocmd FileType html imap <buffer> ,/ </<C-X><C-O><Esc>
 	autocmd FileType html imap <buffer> ,m <Space>/><Esc>
+	autocmd FileType html imap <buffer> ,' ""<Esc>i
+	autocmd FileType html imap <buffer> ,9 ()<Esc>i
 	autocmd FileType html nmap <buffer> ,t :0read ~/.vim/templates/skeleton.html<CR>
 augroup END
 
@@ -73,11 +75,13 @@ augroup filetype_css
 	autocmd FileType css setl tabstop=2
 	autocmd FileType css setl shiftwidth=2
 	autocmd FileType css setl expandtab
+	autocmd FileType css setl formatoptions-=c formatoptions-=r formatoptions-=o
 	autocmd FileType css nmap <buffer> ,x I/*<Esc>A*/<Esc>
 	autocmd FileType css nmap <buffer> ,z ^xx$xx
 	autocmd FileType css imap <buffer> ,c /*<Space><Space>*/<Esc>F<Space>i
 	autocmd FileType css imap <buffer> ,, <Space>;<Esc>i
 	autocmd FileType css imap <buffer> ,. <Space>{<Esc>o}<Esc>O
+	autocmd FileType css imap <buffer> ,m <Esc>A;<Esc>
 	autocmd FileType css imap <buffer> ,' ""<Esc>i
 	autocmd FileType css imap <buffer> ,9 ()<Esc>i
 augroup END
