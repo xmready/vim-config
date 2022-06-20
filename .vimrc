@@ -38,6 +38,7 @@ nmap ,i 1<C-G>
 nmap ,l Go
 nmap ,k Go<CR>
 nmap ,s :w<CR>
+nmap ,a :x<CR>
 nmap ,u :u0<CR>
 imap ,s <ESC>:w<CR>
 imap ,q <ESC>
