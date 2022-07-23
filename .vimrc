@@ -3,13 +3,66 @@ unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 " }}}
 
-" vim-plug
+" Global Variables ----------------------{{{
+let mapleader = ","
+let g:polyglot_disabled = ['sensible']
+let g:everforest_background = 'hard'
+let g:everforest_enable_italic = 1
+let g:onedark_terminal_italics = 1
+let g:sonokai_enable_italic = 1
+let g:srcery_italic = 1
+let g:srcery_italic_types = 1
+" }}}
+
+" YouCompleteMe ----------------------{{{
+"let g:ycm_semantic_triggers = {'vim,html,css,javascript': ['re!\w{2,}'] }
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_echo_current_diagnostic = 0
+nmap <leader>y <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>Y :YcmCompleter GoTo<CR>
+" }}}
+
+" ALE ----------------------{{{
+let g:ale_enabled = 0
+let g:ale_completion_enabled = 0
+let g:ale_fixers = {
+  \ '*':          ['remove_trailing_lines', 'trim_whitespace'],
+  \ 'javascript': ['eslint'],
+  \ }
+nnoremap <F5> :ALEToggle<CR>
+nnoremap <F6> :ALEFix<CR>
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" }}}
+
+" fern.vim ----------------------{{{
+nnoremap <silent> <C-N> :Fern . -drawer -reveal=% -toggle<CR>
+" }}}
+
+" vim-airline ----------------------{{{
+let g:airline_section_c = '%m%r %F'
+let g:airline_section_y = '#%n'
+let g:airline_section_z = '%p%% %l/%L : %v'
+" }}}
+
+" vim-plug ----------------------{{{
 call plug#begin('~/.vim/plugged')
 
 Plug 'ycm-core/YouCompleteMe'
+Plug 'dense-analysis/ale'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/fern.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/everforest'
+Plug 'sainnhe/sonokai'
+Plug 'srcery-colors/srcery-vim'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
+" }}}
 
 " User Defined Global Options
 set hidden
