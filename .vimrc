@@ -210,7 +210,7 @@ inoremap <leader><TAB> <ESC>I<TAB><ESC>
 " }}}
 
 " Global Visual Maps ----------------------{{{
-vnoremap kj <ESC>
+vnoremap <leader>kj <ESC>
 vnoremap <leader><TAB> I<TAB>
 vnoremap <leader>' c'<C-R><C-P>"'<ESC>
 vnoremap <leader>" c"<C-R><C-P>""<ESC>
