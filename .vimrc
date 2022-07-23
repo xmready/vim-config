@@ -1,5 +1,7 @@
+" Set Defaults ----------------------{{{
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
+" }}}
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
