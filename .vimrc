@@ -37,6 +37,15 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " }}}
 
+" vim-fugitive ----------------------{{{
+nnoremap <F9> :0G<CR>
+nnoremap <F10> :G log<CR>
+nnoremap <F11> :Gdiffsplit<CR>
+nnoremap <leader>G :G<SPACE>
+nnoremap <leader>S :Gwrite<CR>
+inoremap <leader>S :Gwrite<CR>
+" }}}
+
 " fern.vim ----------------------{{{
 nnoremap <silent> <C-N> :Fern . -drawer -reveal=% -toggle<CR>
 " }}}
