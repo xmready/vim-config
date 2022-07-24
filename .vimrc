@@ -123,6 +123,7 @@ nnoremap N Nzz
 nnoremap za zazt
 nnoremap zM zMgg
 nnoremap zR zRgg
+nnoremap <F2> :source $MYVIMRC<CR>
 nnoremap <LEFT> <C-W>h
 nnoremap <RIGHT> <C-W>l
 nnoremap <UP> <C-W>k
@@ -166,7 +167,6 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>r <C-R>
 nnoremap <leader>s :write<CR>
-nnoremap <leader>S :source $MYVIMRC<CR>
 nnoremap <leader>u u
 nnoremap <leader>U :undo0<CR>
 nnoremap <leader>v :vsplit<SPACE>
