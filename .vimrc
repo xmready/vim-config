@@ -41,6 +41,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <F9> :0G<CR>
 nnoremap <F10> :G log<CR>
 nnoremap <F11> :Gdiffsplit<CR>
+nnoremap <F12> :0G add -p<CR>
 nnoremap <leader>G :G<SPACE>
 nnoremap <leader>S :Gwrite<CR>
 inoremap <leader>S :Gwrite<CR>
