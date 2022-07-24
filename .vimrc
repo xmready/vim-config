@@ -46,6 +46,13 @@ nnoremap <leader>S :Gwrite<CR>
 inoremap <leader>S :Gwrite<CR>
 " }}}
 
+" vim-gitgutter ----------------------{{{
+nnoremap <F7> :GitGutterToggle<CR>
+nnoremap <F8> :GitGutterFold<CR>
+nmap <leader>, <Plug>(GitGutterStageHunk)
+nmap <leader>. <Plug>(GitGutterUndoHunk)
+" }}}
+
 " fern.vim ----------------------{{{
 nnoremap <silent> <C-N> :Fern . -drawer -reveal=% -toggle<CR>
 " }}}
@@ -63,6 +70,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'lambdalisue/fern.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/everforest'
