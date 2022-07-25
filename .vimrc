@@ -87,7 +87,7 @@ set background=dark
 set completeopt=popup,menuone
 set cursorcolumn
 set cursorline
-set directory=$HOME/gdrive/coding/swap//
+set directory=$HOME/.vim/swap//
 set expandtab
 set hidden
 set history=1000
