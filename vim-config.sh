@@ -29,6 +29,7 @@ echo -e "\n$(tput setaf 3)installing Vim and dependencies\n$(tput sgr0)" \
 
 # add vimrc
 && echo -e "\n$(tput setaf 3)adding vimrc, vim-plug, templates\n$(tput sgr0)" \
+&& mkdir -p ~/.vim/swap \
 && curl -fLo ~/.vimrc https://raw.githubusercontent.com/xmready/vim-config/main/.vimrc \
 && sudo curl -fLo /root/.vimrc https://raw.githubusercontent.com/xmready/vim-config/main/.vimrc-root \
 
