@@ -18,6 +18,7 @@ wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --d
 echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee /etc/apt/sources.list.d/nodesource.list \
 echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list \
 echo -e "\n$(tput setaf 2)NodeSource added\n$(tput sgr0)" \
+&& sleep 3 \
 
 # install vim-nox and dependencies
 echo -e "\n$(tput setaf 3)installing Vim and dependencies\n$(tput sgr0)" \
