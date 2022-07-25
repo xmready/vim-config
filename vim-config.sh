@@ -7,7 +7,7 @@
 #   A script to install vim and configure it with vim-config.
 #
 # Non-root usage:
-#   curl -fsSL https://raw.githubusercontent.com/xmready/vim-config/main/vim-setup.sh | bash -
+#   curl -fsSL https://raw.githubusercontent.com/xmready/vim-config/main/vim-config.sh | bash -
 
 # add nodesource repository
 KEYRING=/usr/share/keyrings/nodesource.gpg \
@@ -19,7 +19,7 @@ echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main"
 echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list \
 
 # install vim-nox and dependencies
-echo -e "\n$(tput setaf 3)installing vim and dependencies\n$(tput sgr0)" \
+echo -e "\n$(tput setaf 3)installing Vim and dependencies\n$(tput sgr0)" \
 && sudo apt update \
 && sudo apt install wget curl vim-nox build-essential cmake python3-dev mono-complete golang nodejs default-jdk npm \
 && echo -e "\n$(tput setaf 2)packages installed\n$(tput sgr0)" \
