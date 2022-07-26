@@ -39,10 +39,10 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " }}}
 
 " vim-fugitive ----------------------{{{
-nnoremap <F9> :G<CR>
+nnoremap <F9> :0Git<CR>
 nnoremap <F10> :Gvdiffsplit<CR>
-nnoremap <F12> :G commit<CR>
-nnoremap <leader>G :G<SPACE>
+nnoremap <F12> :Git commit<CR>
+nnoremap <leader>G :Git<CR>
 nnoremap <leader>S :Gwrite<CR>
 inoremap <leader>S :Gwrite<CR>
 " }}}
