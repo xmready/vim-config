@@ -48,10 +48,10 @@ inoremap <leader>S :Gwrite<CR>
 " }}}
 
 " vim-gitgutter ----------------------{{{
-nnoremap <F7> :GitGutterToggle<CR>
-nnoremap <F8> :GitGutterFold<CR>
+nnoremap <F8> :GitGutterToggle<CR>
 nmap <leader>, <Plug>(GitGutterStageHunk)
 nmap <leader>. <Plug>(GitGutterUndoHunk)
+nnoremap <leader>F :GitGutterFold<CR>
 " }}}
 
 " fern.vim ----------------------{{{
