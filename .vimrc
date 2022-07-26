@@ -33,6 +33,7 @@ let g:ale_fixers = {
   \ }
 nnoremap <F5> :ALEToggle<CR>
 nnoremap <F6> :ALEFix<CR>
+nnoremap <F7> :ALEDetail<CR>
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " }}}
