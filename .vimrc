@@ -161,7 +161,6 @@ nnoremap <leader>D ^d0
 nnoremap <leader>e :edit<SPACE>
 nnoremap <leader>E :edit $MYVIMRC<CR>
 nnoremap <leader>f :xall<CR>
-nnoremap <leader>F ggVGc
 nnoremap <leader>g :buffer<SPACE>
 nnoremap <leader>h :split<SPACE>
 nnoremap <leader>H :split<CR>
@@ -177,6 +176,7 @@ nnoremap <leader>N :set number! number?<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>r <C-R>
+nnoremap <leader>R :%s/
 nnoremap <leader>s :write<CR>
 nnoremap <leader>u u
 nnoremap <leader>U :undo0<CR>
@@ -184,6 +184,7 @@ nnoremap <leader>v :vsplit<SPACE>
 nnoremap <leader>V :vsplit<CR>
 nnoremap <leader>w :bdelete<CR>
 nnoremap <leader>W :bwipeout<CR>
+nnoremap <leader>X ggVGc
 nnoremap <leader><CR> A,<CR>
 nnoremap <leader><ESC> :confirm qall<CR>
 nnoremap <leader><SPACE> i,<SPACE>
@@ -231,6 +232,7 @@ inoremap <leader><TAB> <ESC>I<TAB><ESC>
 
 " Global Visual Maps ----------------------{{{
 vnoremap <leader>kj <ESC>
+vnoremap <leader>R :s/
 vnoremap <leader><TAB> I<TAB>
 vnoremap <leader>' c'<C-R><C-P>"'<ESC>
 vnoremap <leader>" c"<C-R><C-P>""<ESC>
