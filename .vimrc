@@ -55,6 +55,8 @@ nnoremap <leader>F :GitGutterFold<CR>
 " }}}
 
 " fern.vim ----------------------{{{
+let g:fern#default_hidden = 1
+let g:fern#hide_cursor = 1
 nnoremap <silent> <C-N> :Fern . -drawer -reveal=% -toggle<CR>
 " }}}
 
