@@ -278,7 +278,9 @@ iabbrev beutifull beautiful
 iabbrev butiful beautiful
 iabbrev calender calendar
 iabbrev chagne change
-iabbrev cahnged change
+iabbrev cahnge change
+iabbrev chagned changed
+iabbrev cahnged changed
 iabbrev collaegue colleague
 iabbrev collegue colleague
 iabbrev coleague colleague
