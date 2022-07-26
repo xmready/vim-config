@@ -276,6 +276,8 @@ iabbrev beutiful beautiful
 iabbrev beutifull beautiful
 iabbrev butiful beautiful
 iabbrev calender calendar
+iabbrev chagne change
+iabbrev cahnged change
 iabbrev collaegue colleague
 iabbrev collegue colleague
 iabbrev coleague colleague
@@ -285,6 +287,7 @@ iabbrev delet delete
 iabbrev delte delete
 iabbrev deleet delete
 iabbrev dlete delete
+iabbrev desciption description
 iabbrev embarressed embarrassed
 iabbrev embarassed embarrassed
 iabbrev emberrassed embarrassed
@@ -298,6 +301,7 @@ iabbrev fro for
 iabbrev fulfil fulfill
 iabbrev jist gist
 iabbrev goverment government
+iabbrev guranteed guaranteed
 iabbrev guidence guidance
 iabbrev indentifier identifier
 iabbrev idiosyncracy idiosyncrasy
@@ -358,13 +362,18 @@ iabbrev shiping shipping
 iabbrev seige siege
 iabbrev solider soldier
 iabbrev soliders soldiers
+iabbrev substitue substitute
 iabbrev succesful successful
 iabbrev successfull successful
 iabbrev sucessful successful
 iabbrev supercede supersede
+iabbrev truely truly
 iabbrev underate underrate
 iabbrev unforseen unforeseen
 iabbrev unfortunatly unfortunately
+iabbrev unnecesary unnecessary
+iabbrev unneccessary unnecessary
+iabbrev unnecessery unnecessary
 iabbrev untill until
 iabbrev withold withhold
 iabbrev tatoo tattoo
