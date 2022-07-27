@@ -10,18 +10,18 @@
 #   curl -fsSL https://raw.githubusercontent.com/xmready/vim-config/main/vim-config.sh | bash -
 
 # add nodesource repository
-KEYRING=/usr/share/keyrings/nodesource.gpg \
-VERSION=node_16.x \
-DISTRO="$(lsb_release -s -c)" \
 echo -e "\n$(tput setaf 3)adding NodeSource repository\n$(tput sgr0)" \
-wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | sudo tee "$KEYRING" >/dev/null \
-echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee /etc/apt/sources.list.d/nodesource.list \
-echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list \
-echo -e "\n$(tput setaf 2)NodeSource added\n$(tput sgr0)" \
+&& KEYRING=/usr/share/keyrings/nodesource.gpg \
+&& VERSION=node_16.x \
+&& DISTRO="$(lsb_release -s -c)" \
+&& wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | sudo tee "$KEYRING" >/dev/null \
+&& echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee /etc/apt/sources.list.d/nodesource.list \
+&& echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list \
+&& echo -e "\n$(tput setaf 2)NodeSource added\n$(tput sgr0)" \
 && sleep 3 \
 
 # install vim-nox and dependencies
-echo -e "\n$(tput setaf 3)installing Vim and dependencies\n$(tput sgr0)" \
+&& echo -e "\n$(tput setaf 3)installing Vim and dependencies\n$(tput sgr0)" \
 && sudo apt update \
 && sudo apt install curl vim-nox build-essential cmake python3-dev mono-complete golang nodejs default-jdk \
 && echo -e "\n$(tput setaf 2)packages installed\n$(tput sgr0)" \
