@@ -422,7 +422,7 @@ iabbrev wierd weird
 " BufNewFile ----------------------{{{
 augroup newfiles
   autocmd!
-  autocmd BufNewFile *.html 0r ~/.vim/templates/skeleton.html
+  autocmd BufNewFile *.html 0r ~/.vim/templates/html/skeleton.html
   autocmd BufNewFile * :write
 augroup END
 " }}}
@@ -462,8 +462,8 @@ augroup filetype_css
   autocmd!
   autocmd FileType css setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   autocmd FileType css setlocal nowrap
-  autocmd FileType css nnoremap <buffer> <leader>x I/*<ESC>A*/<ESC>
-  autocmd FileType css nnoremap <buffer> <leader>z ^xx$xx
+  autocmd FileType css nnoremap <buffer> <leader>x I/* <ESC>A */<ESC>
+  autocmd FileType css nnoremap <buffer> <leader>z ^xxx$xxx
   autocmd FileType css nnoremap <buffer> <leader>m A;<ESC>
   autocmd FileType css inoremap <buffer> <leader>c /*  */<ESC>F i
   autocmd FileType css inoremap <buffer> <leader>,  ;<LEFT>
@@ -476,8 +476,9 @@ augroup filetype_javascript
   autocmd!
   autocmd FileType javascript setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   autocmd FileType javascript setlocal nowrap
-  autocmd FileType javascript nnoremap <buffer> <leader>x I//<ESC>
-  autocmd FileType javascript nnoremap <buffer> <leader>z ^xx
+  autocmd FileType javascript nnoremap <F4> :execute '!cp -R $HOME/.vim/templates/js/. .' \| !npm install eslint prettier --save-dev<CR>
+  autocmd FileType javascript nnoremap <buffer> <leader>x I// <ESC>
+  autocmd FileType javascript nnoremap <buffer> <leader>z ^xxx
   autocmd FileType javascript nnoremap <buffer> <leader>m A;
   autocmd FileType javascript nnoremap <buffer> <leader>? A<SPACE>?<CR>
   autocmd FileType javascript nnoremap <buffer> <leader>m A;<ESC>
@@ -488,17 +489,27 @@ augroup filetype_javascript
   autocmd FileType javascript inoremap <buffer> <C-c> /**<CR><SPACE>*/<ESC>O*<SPACE>
   autocmd FileType javascript inoremap <buffer> <leader>, ;<LEFT>
   autocmd FileType javascript inoremap <buffer> <leader>. <ESC>A {<ESC>o}<ESC>O
-  autocmd FileType javascript inoremap <buffer> <leader>/ <SPACE>{<CR>}<ESC>O
+  autocmd FileType javascript inoremap <buffer> <leader>/ <ESC>g_i {<CR>}<ESC>O
   autocmd FileType javascript inoremap <buffer> <leader>m <ESC>A;
   autocmd FileType javascript inoremap <buffer> <leader>M <ESC>A;<CR>
-  autocmd FileType javascript inoremap <buffer> <leader>; <ESC>jA;
-  autocmd FileType javascript inoremap <buffer> <leader>? <ESC>$i<SPACE>?<CR>
-  autocmd FileType javascript inoremap <buffer> <leader>: <ESC>$i<SPACE>:<CR>
+  autocmd FileType javascript inoremap <buffer> <leader>; <ESC>o;<LEFT>
+  autocmd FileType javascript inoremap <buffer> <leader>? <SPACE>?<SPACE>
+  autocmd FileType javascript inoremap <buffer> <leader>: <SPACE>:<SPACE>
   autocmd FileType javascript inoremap <buffer> <leader>9 (<CR>)<ESC>O
   autocmd FileType javascript inoremap <buffer> <leader>` `<CR>`<ESC>O<TAB>
   autocmd FileType javascript inoremap <buffer> <leader>{ {<CR>}<ESC>O
+  autocmd FileType javascript inoremap <buffer> <leader>[ [<CR>]<ESC>O
+  autocmd FileType javascript inoremap <buffer> <leader>( (<CR>)<ESC>O
+  autocmd FileType javascript inoremap <buffer> <leader>= <SPACE>=<SPACE>
+  autocmd FileType javascript inoremap <buffer> <leader>* <SPACE>*<SPACE>
+  autocmd FileType javascript inoremap <buffer> <leader>- <SPACE>-<SPACE>
+  autocmd FileType javascript inoremap <buffer> <leader>+ <SPACE>+<SPACE>
+  autocmd FileType javascript inoremap <buffer> <leader>> <SPACE>><SPACE>
+  autocmd FileType javascript inoremap <buffer> <leader>< <SPACE><<SPACE>
+  autocmd FileType javascript inoremap <buffer> jj <SPACE>=><SPACE>
   autocmd FileType javascript inoremap <buffer> <BAR> <BAR><BAR>
   autocmd FileType javascript inoremap <buffer> & &&
+  autocmd FileType javascript inoremap <buffer> $ ${}<LEFT>
   autocmd FileType javascript inoremap <buffer> ( ()<LEFT>
   autocmd FileType javascript inoremap <buffer> [ []<LEFT>
   autocmd FileType javascript inoremap <buffer> { {}<LEFT>
