@@ -200,20 +200,25 @@ nnoremap <leader><TAB> I<TAB><ESC>
 " Global Insert Maps ----------------------{{{
 inoremap hj <RIGHT>,<SPACE>
 inoremap jh ,<LEFT>
-inoremap jj <ESC>o<CR>
+inoremap JH <ESC>o,<LEFT>
+inoremap JJ <ESC>o<CR>
+inoremap jJ <ESC>o<ESC>O
 inoremap jk <ESC>jA
-inoremap kj <ESC>
-inoremap kk <ESC>jo
-inoremap hh <SPACE><SPACE><LEFT>
+inoremap kj <ESC>l
+inoremap KK <ESC>jo
+inoremap HH <SPACE><SPACE><LEFT>
+inoremap <F1> <ESC>:edit $MYVIMRC<CR>
+inoremap <F2> <ESC>:source $MYVIMRC<CR>
+inoremap <F3> <ESC>:setlocal spell spelllang=en_us<CR>
 inoremap <leader>a <ESC>la
 inoremap <leader>A <ESC>A
 inoremap <leader>b <ESC>:buffers<CR>
-inoremap <leader>d <ESC>o<C-D>
-inoremap <leader>D <ESC>o<CR><C-D>
-inoremap <leader>e <ESC>:edit<SPACE>
-inoremap <leader>E <ESC>:edit $MYVIMRC<CR>
+inoremap <leader>d <ESC>I<C-D><ESC>
+inoremap <leader>D <ESC>^d0
+inoremap <leader>E <ESC>:edit<SPACE>
+inoremap <leader>e <ESC>g_i
 inoremap <leader>f <ESC>:xall<CR>
-inoremap <leader>F <ESC>ggVGc
+inoremap <leader>X <ESC>ggVGc
 nnoremap <leader>g <ESC>:buffer<SPACE>
 inoremap <leader>I <ESC>I
 inoremap <leader>j <ESC>Go<CR>
@@ -222,10 +227,11 @@ inoremap <leader>K <ESC>ggO<ESC>O
 imap     <leader>l <ESC><C-6>
 inoremap <leader>L <ESC>:set list!<CR>
 inoremap <leader>n <ESC>:nohlsearch<CR>
-inoremap <leader>N <ESC>:set number! number?<CR>li
+inoremap <leader>N <ESC>:setlocal number! number?<CR>li
 inoremap <leader>o <ESC>o
 inoremap <leader>O <ESC>O
-inoremap <leader>p <C-R><C-P>"
+inoremap <leader>p <C-R><C-P>
+inoremap <leader>P <C-R><C-P>0
 inoremap <leader>q <ESC>:q<CR>
 inoremap <leader>Q <ESC>:q!<CR>
 inoremap <leader>r <ESC><C-R>
