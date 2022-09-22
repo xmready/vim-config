@@ -272,6 +272,7 @@ iabbrev acessable accessible
 iabbrev accross across
 iabbrev agression aggression
 iabbrev aler alert
+iabbrev laert alert
 iabbrev adn and
 iabbrev apparant apparent
 iabbrev aparent apparent
@@ -284,6 +285,8 @@ iabbrev aparrently apparently
 iabbrev apparrently apparently
 iabbrev baloon balloon
 iabbrev beautifull beautiful
+iabbrev begining beginning
+iabbrev begininng beginning
 iabbrev beutiful beautiful
 iabbrev beutifull beautiful
 iabbrev butiful beautiful
@@ -312,7 +315,11 @@ iabbrev entreperneur entrepreneur
 iabbrev experiance experience
 iabbrev flase false
 iabbrev fro for
+iabbrev foer for
 iabbrev fulfil fulfill
+iabbrev fucntion function
+iabbrev fcuntion function
+iabbrev functino function
 iabbrev jist gist
 iabbrev goverment government
 iabbrev guranteed guaranteed
@@ -351,6 +358,7 @@ iabbrev perseverence perseverance
 iabbrev persaverance perseverance
 iabbrev persaverence perseverance
 iabbrev persistant persistent
+iabbrev postion position
 iabbrev presedence precedence
 iabbrev privelege privilege
 iabbrev priviledge privilege
@@ -376,6 +384,7 @@ iabbrev shiping shipping
 iabbrev seige siege
 iabbrev solider soldier
 iabbrev soliders soldiers
+iabbrev splcie splice
 iabbrev substitue substitute
 iabbrev succesful successful
 iabbrev successfull successful
@@ -389,6 +398,7 @@ iabbrev unnecesary unnecessary
 iabbrev unneccessary unnecessary
 iabbrev unnecessery unnecessary
 iabbrev untill until
+iabbrev udpate update
 iabbrev withold withhold
 iabbrev tatoo tattoo
 iabbrev teh the
