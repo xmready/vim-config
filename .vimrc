@@ -54,7 +54,8 @@ inoremap <leader>S :Gwrite<CR>
 " }}}
 
 " vim-gitgutter ----------------------{{{
-nnoremap <F8> :GitGutterToggle<CR>
+let g:gitgutter_signs = 0
+nnoremap <F8> :GitGutterSignsToggle<CR>
 nmap <leader>, <Plug>(GitGutterStageHunk)
 nmap <leader>. <Plug>(GitGutterUndoHunk)
 nnoremap <leader>F :GitGutterFold<CR>gg
