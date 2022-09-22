@@ -23,7 +23,7 @@ echo -e "\n$(tput setaf 3)adding NodeSource repository\n$(tput sgr0)" \
 # install vim-nox and dependencies
 && echo -e "\n$(tput setaf 3)installing Vim and dependencies\n$(tput sgr0)" \
 && sudo apt update \
-&& sudo apt install curl vim-nox build-essential cmake python3-dev mono-complete golang nodejs default-jdk \
+&& sudo apt install curl vim-nox build-essential cmake python3-dev mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre \
 && echo -e "\n$(tput setaf 2)packages installed\n$(tput sgr0)" \
 && sleep 3 \
 
