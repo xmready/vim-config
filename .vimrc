@@ -137,7 +137,10 @@ nnoremap N Nzz
 nnoremap za zazt
 nnoremap zM zMgg
 nnoremap zR zRgg
+nnoremap <F1> :edit $MYVIMRC<CR>
 nnoremap <F2> :source $MYVIMRC<CR>
+nnoremap <F3> :setlocal spell spelllang=en_us<CR>
+nnoremap <S-k> i<CR><ESC>
 nnoremap <LEFT> <C-W>h
 nnoremap <RIGHT> <C-W>l
 nnoremap <UP> <C-W>k
@@ -157,17 +160,17 @@ nnoremap <leader>` ciw`<C-R><C-P>"`<ESC>
 nnoremap <leader>[ ciw[<C-R><C-P>"]<ESC>
 nnoremap <leader>{ ciw{<C-R><C-P>"}<ESC>
 nnoremap <leader>( ciw(<C-R><C-P>")<ESC>
-nnoremap <leader>a l%%a
+nnoremap <leader>a l%%<RIGHT>
 nnoremap <leader>b :buffers<CR>
-nnoremap <leader>d ^i<C-D><ESC>
+nnoremap <leader>c :terminal ++close<CR>
+nnoremap <leader>d I<C-D><ESC>
 nnoremap <leader>D ^d0
-nnoremap <leader>e :edit<SPACE>
-nnoremap <leader>E :edit $MYVIMRC<CR>
+nnoremap <leader>E :edit<SPACE>
+nnoremap <leader>e g_i
 nnoremap <leader>f :xall<CR>
 nnoremap <leader>g :buffer<SPACE>
 nnoremap <leader>h :split<SPACE>
 nnoremap <leader>H :split<CR>
-nnoremap <leader>i i<CR><ESC>
 nnoremap <leader>j Go<CR>
 nnoremap <leader>J Go
 nnoremap <leader>k ggO
@@ -175,7 +178,7 @@ nnoremap <leader>K ggO<ESC>O
 nmap 	 <leader>l <C-6>
 nnoremap <leader>L :set list!<CR>
 nnoremap <leader>n :nohlsearch<CR>
-nnoremap <leader>N :set number! number?<CR>
+nnoremap <leader>N :setlocal number! number?<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>r <C-R>
