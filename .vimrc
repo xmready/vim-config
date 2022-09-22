@@ -97,16 +97,15 @@ set background=dark
 set completeopt=popup,menuone
 set cursorcolumn
 set cursorline
-set directory=$HOME/.vim/swap//
+set directory=$HOME/gdrive/coding/swap//
 set expandtab
 set hidden
 set history=1000
 set hlsearch
 set ignorecase
-set iskeyword+=-
 set laststatus=2
 set linebreak
-set listchars=space:_,tab:>~
+set listchars+=space:_,tab:>~
 set mouse=a
 set noerrorbells
 set noshowmode
@@ -129,10 +128,7 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*.swp,*~,._*
 set wildmode=longest,full
-"colorscheme everforest
 colorscheme onedark
-"colorscheme sonokai
-"colorscheme srcery
 " }}}
 
 " Global Normal Maps ----------------------{{{
