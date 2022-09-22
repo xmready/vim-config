@@ -29,12 +29,15 @@ nmap <leader>Y <Plug>(YCMFindSymbolInWorkspace)
 " ALE ----------------------{{{
 let g:ale_enabled = 0
 let g:ale_completion_enabled = 0
+let g:ale_fix_on_save = 1
 let g:ale_fixers = {
   \ '*':          ['remove_trailing_lines', 'trim_whitespace'],
-  \ 'javascript': ['eslint'],
+  \ 'javascript': ['prettier'],
   \ }
 nnoremap <F5> :ALEToggle<CR>
+inoremap <F5> <ESC>:ALEToggle<CR>
 nnoremap <F6> :ALEFix<CR>
+inoremap <F6> <ESC>:ALEFix<CR>
 nnoremap <F7> :ALEDetail<CR>
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
