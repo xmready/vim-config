@@ -230,7 +230,7 @@ inoremap <leader>n <ESC>:nohlsearch<CR>
 inoremap <leader>N <ESC>:setlocal number! number?<CR>li
 inoremap <leader>o <ESC>o
 inoremap <leader>O <ESC>O
-inoremap <leader>p <C-R><C-P>
+inoremap <leader>p <C-R><C-P>"
 inoremap <leader>P <C-R><C-P>0
 inoremap <leader>q <ESC>:q<CR>
 inoremap <leader>Q <ESC>:q!<CR>
