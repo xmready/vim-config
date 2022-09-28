@@ -9,21 +9,26 @@
 # Non-root usage:
 #   curl -fsSL https://raw.githubusercontent.com/xmready/vim-config/main/vim-config.sh | bash -
 
-# add nodesource repository
-echo -e "\n$(tput setaf 3)adding NodeSource repository\n$(tput sgr0)" \
+# NodeSource repository configuration and installation
+echo -e "\n$(tput setaf 3)adding NodeSource repo\n$(tput sgr0)" \
 && KEYRING=/usr/share/keyrings/nodesource.gpg \
 && VERSION=node_16.x \
 && DISTRO="$(lsb_release -s -c)" \
-&& wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | sudo tee "$KEYRING" >/dev/null \
+&& curl -fL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | sudo tee "$KEYRING" >/dev/null \
 && echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee /etc/apt/sources.list.d/nodesource.list \
 && echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list \
-&& echo -e "\n$(tput setaf 2)NodeSource added\n$(tput sgr0)" \
+&& echo -e "\n$(tput setaf 2)NodeSource repo added\n$(tput sgr0)" \
+&& sleep 3 \
+echo -e "\n$(tput setaf 3)installing nodejs\n$(tput sgr0)" \
+&& sudo apt update \
+&& sudo apt install -y nodejs \
+&& echo -e "\n$(tput setaf 2)nodejs installed\n$(tput sgr0)" \
 && sleep 3 \
 
 # install vim-nox and dependencies
 && echo -e "\n$(tput setaf 3)installing Vim and dependencies\n$(tput sgr0)" \
 && sudo apt update \
-&& sudo apt install curl vim-nox build-essential cmake python3-dev mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre \
+&& sudo apt install curl build-essential cmake golang mono-complete openjdk-17-jdk openjdk-17-jre python3-dev vim-nox \
 && echo -e "\n$(tput setaf 2)packages installed\n$(tput sgr0)" \
 && sleep 3 \
 
