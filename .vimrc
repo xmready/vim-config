@@ -44,13 +44,13 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " }}}
 
 " vim-fugitive ----------------------{{{
-nnoremap <F9> :0Git<CR>
+nnoremap <F9> :0Git log<CR>
 nnoremap <F10> :Gvdiffsplit<CR>
-nnoremap <F12> :0Git log<CR>
+nnoremap <F12> :Git push<CR>
 nnoremap <leader>C :Git commit<CR>
-nnoremap <leader>G :Git<CR>
+nnoremap <leader>G :0Git<CR>
 nnoremap <leader>S :Gwrite<CR>
-inoremap <leader>S :Gwrite<CR>
+inoremap <leader>S <ESC>:Gwrite<CR>
 " }}}
 
 " vim-gitgutter ----------------------{{{
