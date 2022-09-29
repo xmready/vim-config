@@ -68,7 +68,7 @@ nnoremap <silent> <C-N> :Fern . -drawer -reveal=% -toggle<CR>
 " }}}
 
 " vim-airline ----------------------{{{
-let g:airline_section_c = '%m%r %F'
+let g:airline_section_c = '%m%r %f'
 let g:airline_section_y = '#%n'
 let g:airline_section_z = '%p%% %l/%L : %v'
 " }}}
