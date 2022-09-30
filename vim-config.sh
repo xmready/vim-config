@@ -32,7 +32,7 @@
 # add scripts to /usr/local/bin
 && sudo curl -fLo /usr/local/bin/ycmcompile https://raw.githubusercontent.com/xmready/vim-config/main/ycmcompile.sh \
 && sudo chmod +x /usr/local/bin/ycmcompile \
-&& echo -e "\n$(tput setaf 2)Vim configured\n$(tput sgr0)"
+&& echo -e "\n$(tput setaf 2)Vim configured\n$(tput sgr0)" \
 && sleep 3 \
 
 # NodeSource repository configuration and installation
