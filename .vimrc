@@ -465,10 +465,12 @@ augroup filetype_css
   autocmd FileType css nnoremap <buffer> <leader>x I/* <ESC>A */<ESC>
   autocmd FileType css nnoremap <buffer> <leader>z ^xxx$xxx
   autocmd FileType css nnoremap <buffer> <leader>m A;<ESC>
+  autocmd FileType css nnoremap <buffer> <leader>; jA;<ESC>
   autocmd FileType css inoremap <buffer> <leader>c /*  */<ESC>F i
   autocmd FileType css inoremap <buffer> <leader>,  ;<LEFT>
-  autocmd FileType css inoremap <buffer> <leader>.  {<ESC>o}<ESC>O
+  autocmd FileType css inoremap <buffer> <leader>. <SPACE>{<ESC>o}<ESC>O
   autocmd FileType css inoremap <buffer> <leader>m <ESC>A;
+  autocmd FileType css inoremap <buffer> <leader>; <ESC>o;<LEFT>
   autocmd FileType css inoremap <buffer> ( ()<LEFT>
 augroup END
 
