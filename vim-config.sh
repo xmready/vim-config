@@ -40,12 +40,16 @@ echo -e "\n$(tput setaf 3)adding NodeSource repo\n$(tput sgr0)" \
 && KEYRING=/usr/share/keyrings/nodesource.gpg \
 && VERSION=node_16.x \
 && DISTRO="$(lsb_release -s -c)" \
-&& curl -fL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | sudo tee "$KEYRING" >/dev/null \
-&& echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee /etc/apt/sources.list.d/nodesource.list \
-&& echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list \
+&& curl -fL https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
+  | gpg --dearmor \
+  | sudo tee "$KEYRING" >/dev/null \
+&& echo "deb [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" \
+  | sudo tee /etc/apt/sources.list.d/nodesource.list \
+&& echo "deb-src [signed-by=$KEYRING] https://deb.nodesource.com/$VERSION $DISTRO main" \
+  | sudo tee -a /etc/apt/sources.list.d/nodesource.list \
 && echo -e "\n$(tput setaf 2)NodeSource repo added\n$(tput sgr0)" \
 && sleep 3 \
 echo -e "\n$(tput setaf 3)installing nodejs\n$(tput sgr0)" \
 && sudo apt update \
 && sudo apt install -y nodejs \
-&& echo -e "\n$(tput setaf 2)nodejs installed\n$(tput sgr0)" \
+&& echo -e "\n$(tput setaf 2)nodejs installed\n$(tput sgr0)"
