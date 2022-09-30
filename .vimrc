@@ -218,6 +218,11 @@ inoremap " ""<LEFT>
 inoremap ` ``<LEFT>
 inoremap <leader>' '
 inoremap <leader>" "
+inoremap <leader>9 (<CR>)<ESC>O
+inoremap <leader>` `<CR>`<ESC>O<TAB>
+inoremap <leader>{ {<CR>}<ESC>O
+inoremap <leader>[ [<CR>]<ESC>O
+inoremap <leader>( (<CR>)<ESC>O
 inoremap <leader>a <ESC>la
 inoremap <leader>A <ESC>A
 inoremap <leader>b <ESC>:buffers<CR>
@@ -502,11 +507,6 @@ augroup filetype_javascript
   autocmd FileType javascript inoremap <buffer> <leader>; <ESC>o;<LEFT>
   autocmd FileType javascript inoremap <buffer> <leader>? <SPACE>?<SPACE>
   autocmd FileType javascript inoremap <buffer> <leader>: <SPACE>:<SPACE>
-  autocmd FileType javascript inoremap <buffer> <leader>9 (<CR>)<ESC>O
-  autocmd FileType javascript inoremap <buffer> <leader>` `<CR>`<ESC>O<TAB>
-  autocmd FileType javascript inoremap <buffer> <leader>{ {<CR>}<ESC>O
-  autocmd FileType javascript inoremap <buffer> <leader>[ [<CR>]<ESC>O
-  autocmd FileType javascript inoremap <buffer> <leader>( (<CR>)<ESC>O
   autocmd FileType javascript inoremap <buffer> <leader>= <SPACE>=<SPACE>
   autocmd FileType javascript inoremap <buffer> <leader>* <SPACE>*<SPACE>
   autocmd FileType javascript inoremap <buffer> <leader>- <SPACE>-<SPACE>
