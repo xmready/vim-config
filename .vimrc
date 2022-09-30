@@ -445,25 +445,24 @@ augroup filetype_vim
   autocmd FileType vim inoremap <buffer> <leader>c "<SPACE>
   autocmd FileType vim inoremap <buffer> <leader>C "<CR> }}}<UP> ----------------------{{{<ESC>F"a<SPACE>
   autocmd FileType vim inoremap <buffer> < <><LEFT>
-  autocmd FileType vim inoremap <buffer> ' ''<LEFT>
-  autocmd FileType vim inoremap <buffer> { {}<LEFT>
-  autocmd FileType vim inoremap <buffer> [ []<LEFT>
-  autocmd FileType vim inoremap <buffer> ( ()<LEFT>
 augroup END
 
 augroup filetype_html
   autocmd!
   autocmd FileType html set nowrap
   autocmd FileType html nnoremap <buffer> <leader>t :0read ~/.vim/templates/html/skeleton.html<CR>
-  autocmd FileType html nnoremap <buffer> <leader>x I<!--<ESC>A--><ESC>
-  autocmd FileType html nnoremap <buffer> <leader>z ^xxxx$xxx
+  autocmd FileType html nnoremap <buffer> <leader>x I<!-- <ESC>A --><ESC>
+  autocmd FileType html nnoremap <buffer> <leader>z ^xxxxx$xxxx
   autocmd FileType html inoremap <buffer> <leader>c <!--  --><ESC>F i
-  autocmd FileType html inoremap <buffer> <leader>, <ESC>A></<C-X><C-O><ESC>F<i
-  autocmd FileType html inoremap <buffer> <leader>. <ESC>A><ESC>o<C-D></<C-X><C-O><ESC>O
+  autocmd FileType html inoremap <buffer> <leader>C <!--<CR>--><ESC>O
+  autocmd FileType html inoremap <buffer> <leader>, <ESC>A</<C-X><C-O><ESC>F<i
+  autocmd FileType html inoremap <buffer> <leader>. <ESC>A<ESC>o<C-D></<C-X><C-O><ESC>O
   autocmd FileType html inoremap <buffer> <leader>/ </<C-X><C-O><ESC>
   autocmd FileType html inoremap <buffer> <leader>m <ESC>A /><ESC>
   autocmd FileType html inoremap <buffer> <leader>= =""<LEFT>
-  autocmd FileType html inoremap <buffer> ( ()<LEFT>
+  autocmd FileType html inoremap <buffer> < <><LEFT>
+  autocmd FileType html vnoremap <buffer> <leader>x c<!--<CR>--><ESC>P
+  autocmd FileType html vnoremap <buffer> <leader>z :g/--/d<CR>
 augroup END
 
 augroup filetype_css
@@ -476,10 +475,9 @@ augroup filetype_css
   autocmd FileType css nnoremap <buffer> <leader>; jA;<ESC>
   autocmd FileType css inoremap <buffer> <leader>c /*  */<ESC>F i
   autocmd FileType css inoremap <buffer> <leader>,  ;<LEFT>
-  autocmd FileType css inoremap <buffer> <leader>. <SPACE>{<ESC>o}<ESC>O
+  autocmd FileType css inoremap <buffer> <leader>. <SPACE>{<CR>}<ESC>O;<LEFT>
   autocmd FileType css inoremap <buffer> <leader>m <ESC>A;
   autocmd FileType css inoremap <buffer> <leader>; <ESC>o;<LEFT>
-  autocmd FileType css inoremap <buffer> ( ()<LEFT>
 augroup END
 
 augroup filetype_javascript
@@ -489,7 +487,6 @@ augroup filetype_javascript
   autocmd FileType javascript nnoremap <F4> :execute '!cp -R $HOME/.vim/templates/js/. .' \| !npm install eslint prettier --save-dev<CR>
   autocmd FileType javascript nnoremap <buffer> <leader>x I// <ESC>
   autocmd FileType javascript nnoremap <buffer> <leader>z ^xxx
-  autocmd FileType javascript nnoremap <buffer> <leader>m A;
   autocmd FileType javascript nnoremap <buffer> <leader>? A<SPACE>?<CR>
   autocmd FileType javascript nnoremap <buffer> <leader>m A;<ESC>
   autocmd FileType javascript nnoremap <buffer> <leader>M A;<CR>
@@ -520,13 +517,5 @@ augroup filetype_javascript
   autocmd FileType javascript inoremap <buffer> <BAR> <BAR><BAR>
   autocmd FileType javascript inoremap <buffer> & &&
   autocmd FileType javascript inoremap <buffer> $ ${}<LEFT>
-  autocmd FileType javascript inoremap <buffer> ( ()<LEFT>
-  autocmd FileType javascript inoremap <buffer> [ []<LEFT>
-  autocmd FileType javascript inoremap <buffer> { {}<LEFT>
-  autocmd FileType javascript inoremap <buffer> ' ''<LEFT>
-  autocmd FileType javascript inoremap <buffer> " ""<LEFT>
-  autocmd FileType javascript inoremap <buffer> ` ``<LEFT>
-  autocmd FileType javascript inoremap <buffer> <leader>' '
-  autocmd FileType javascript inoremap <buffer> <leader>" "
 augroup END
 " }}}
