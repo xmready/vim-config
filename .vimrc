@@ -132,11 +132,6 @@ colorscheme onedark
 " }}}
 
 " Global Normal Maps ----------------------{{{
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap za zazt
-nnoremap zM zMgg
-nnoremap zR zRgg
 nnoremap <F1> :edit $MYVIMRC<CR>
 nnoremap <F2> :source $MYVIMRC<CR>
 nnoremap <F3> :setlocal spell spelllang=en_us<CR>
@@ -147,6 +142,11 @@ nnoremap <UP> <C-W>k
 nnoremap <DOWN> <C-W>j
 nnoremap - 5<C-W><
 nnoremap = 5<C-W>>
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap za zazt
+nnoremap zM zMgg
+nnoremap zR zRgg
 nnoremap <leader>0 <C-W>=
 nnoremap <leader>d' di'p2F'xx
 nnoremap <leader>d" di"p2F"xx
