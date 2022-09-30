@@ -13,14 +13,14 @@ set cursorcolumn
 set cursorline
 set expandtab
 set hidden
+set history=1000
 set hlsearch
 set ignorecase
-set iskeyword+=-
+set laststatus=2
 set linebreak
-set listchars=space:_,tab:>~
+set listchars+=space:_,tab:>~
 set mouse=a
 set noerrorbells
-set noshowmode
 set number
 set scrolloff=4
 set shiftwidth=2
@@ -30,7 +30,6 @@ set splitright
 set splitbelow
 set switchbuf=usetab
 set tabstop=2
-set termguicolors
 set title
 set updatetime=100
 set visualbell
@@ -43,18 +42,21 @@ set wildmode=longest,full
 " }}}
 
 " Global Normal Maps ----------------------{{{
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap za zazt
-nnoremap zM zMgg
-nnoremap zR zRgg
+nnoremap <F1> :edit $MYVIMRC<CR>
 nnoremap <F2> :source $MYVIMRC<CR>
+nnoremap <F3> :setlocal spell spelllang=en_us<CR>
+nnoremap <S-k> i<CR><ESC>
 nnoremap <LEFT> <C-W>h
 nnoremap <RIGHT> <C-W>l
 nnoremap <UP> <C-W>k
 nnoremap <DOWN> <C-W>j
 nnoremap - 5<C-W><
 nnoremap = 5<C-W>>
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap za zazt
+nnoremap zM zMgg
+nnoremap zR zRgg
 nnoremap <leader>0 <C-W>=
 nnoremap <leader>d' di'p2F'xx
 nnoremap <leader>d" di"p2F"xx
@@ -68,18 +70,17 @@ nnoremap <leader>` ciw`<C-R><C-P>"`<ESC>
 nnoremap <leader>[ ciw[<C-R><C-P>"]<ESC>
 nnoremap <leader>{ ciw{<C-R><C-P>"}<ESC>
 nnoremap <leader>( ciw(<C-R><C-P>")<ESC>
-nnoremap <leader>a l%%a
+nnoremap <leader>a l%%<RIGHT>
 nnoremap <leader>b :buffers<CR>
-nnoremap <leader>d ^i<C-D><ESC>
+nnoremap <leader>c :terminal ++close<CR>
+nnoremap <leader>d I<C-D><ESC>
 nnoremap <leader>D ^d0
-nnoremap <leader>e :edit<SPACE>
-nnoremap <leader>E :edit $MYVIMRC<CR>
+nnoremap <leader>E :edit<SPACE>
+nnoremap <leader>e g_i
 nnoremap <leader>f :xall<CR>
-nnoremap <leader>F ggVGc
 nnoremap <leader>g :buffer<SPACE>
 nnoremap <leader>h :split<SPACE>
 nnoremap <leader>H :split<CR>
-nnoremap <leader>i i<CR><ESC>
 nnoremap <leader>j Go<CR>
 nnoremap <leader>J Go
 nnoremap <leader>k ggO
@@ -87,10 +88,11 @@ nnoremap <leader>K ggO<ESC>O
 nmap 	 <leader>l <C-6>
 nnoremap <leader>L :set list!<CR>
 nnoremap <leader>n :nohlsearch<CR>
-nnoremap <leader>N :set number! number?<CR>
+nnoremap <leader>N :setlocal number! number?<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>r <C-R>
+nnoremap <leader>R :%s/
 nnoremap <leader>s :write<CR>
 nnoremap <leader>u u
 nnoremap <leader>U :undo0<CR>
@@ -98,6 +100,7 @@ nnoremap <leader>v :vsplit<SPACE>
 nnoremap <leader>V :vsplit<CR>
 nnoremap <leader>w :bdelete<CR>
 nnoremap <leader>W :bwipeout<CR>
+nnoremap <leader>X ggVGc
 nnoremap <leader><CR> A,<CR>
 nnoremap <leader><ESC> :confirm qall<CR>
 nnoremap <leader><SPACE> i,<SPACE>
@@ -105,22 +108,40 @@ nnoremap <leader><TAB> I<TAB><ESC>
 " }}}
 
 " Global Insert Maps ----------------------{{{
+inoremap <F1> <ESC>:edit $MYVIMRC<CR>
+inoremap <F2> <ESC>:source $MYVIMRC<CR>
+inoremap <F3> <ESC>:setlocal spell spelllang=en_us<CR>
 inoremap hj <RIGHT>,<SPACE>
 inoremap jh ,<LEFT>
-inoremap jj <ESC>o<CR>
+inoremap JH <ESC>o,<LEFT>
+inoremap JJ <ESC>o<CR>
+inoremap jJ <ESC>o<ESC>O
 inoremap jk <ESC>jA
-inoremap kj <ESC>
-inoremap kk <ESC>jo
-inoremap hh <SPACE><SPACE><LEFT>
+inoremap kj <ESC>l
+inoremap KK <ESC>jo
+inoremap HH <SPACE><SPACE><LEFT>
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+inoremap { {}<LEFT>
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
+inoremap ` ``<LEFT>
+inoremap <leader>' '
+inoremap <leader>" "
+inoremap <leader>9 (<CR>)<ESC>O
+inoremap <leader>` `<CR>`<ESC>O<TAB>
+inoremap <leader>{ {<CR>}<ESC>O
+inoremap <leader>[ [<CR>]<ESC>O
+inoremap <leader>( (<CR>)<ESC>O
 inoremap <leader>a <ESC>la
 inoremap <leader>A <ESC>A
 inoremap <leader>b <ESC>:buffers<CR>
-inoremap <leader>d <ESC>o<C-D>
-inoremap <leader>D <ESC>o<CR><C-D>
-inoremap <leader>e <ESC>:edit<SPACE>
-inoremap <leader>E <ESC>:edit $MYVIMRC<CR>
+inoremap <leader>d <ESC>I<C-D><ESC>
+inoremap <leader>D <ESC>^d0
+inoremap <leader>E <ESC>:edit<SPACE>
+inoremap <leader>e <ESC>g_i
 inoremap <leader>f <ESC>:xall<CR>
-inoremap <leader>F <ESC>ggVGc
+inoremap <leader>X <ESC>ggVGc
 nnoremap <leader>g <ESC>:buffer<SPACE>
 inoremap <leader>I <ESC>I
 inoremap <leader>j <ESC>Go<CR>
@@ -129,10 +150,11 @@ inoremap <leader>K <ESC>ggO<ESC>O
 imap     <leader>l <ESC><C-6>
 inoremap <leader>L <ESC>:set list!<CR>
 inoremap <leader>n <ESC>:nohlsearch<CR>
-inoremap <leader>N <ESC>:set number! number?<CR>li
+inoremap <leader>N <ESC>:setlocal number! number?<CR>li
 inoremap <leader>o <ESC>o
 inoremap <leader>O <ESC>O
 inoremap <leader>p <C-R><C-P>"
+inoremap <leader>P <C-R><C-P>0
 inoremap <leader>q <ESC>:q<CR>
 inoremap <leader>Q <ESC>:q!<CR>
 inoremap <leader>r <ESC><C-R>
@@ -145,6 +167,7 @@ inoremap <leader><TAB> <ESC>I<TAB><ESC>
 
 " Global Visual Maps ----------------------{{{
 vnoremap <leader>kj <ESC>
+vnoremap <leader>R :s/
 vnoremap <leader><TAB> I<TAB>
 vnoremap <leader>' c'<C-R><C-P>"'<ESC>
 vnoremap <leader>" c"<C-R><C-P>""<ESC>
