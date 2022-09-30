@@ -198,6 +198,9 @@ nnoremap <leader><TAB> I<TAB><ESC>
 " }}}
 
 " Global Insert Maps ----------------------{{{
+inoremap <F1> <ESC>:edit $MYVIMRC<CR>
+inoremap <F2> <ESC>:source $MYVIMRC<CR>
+inoremap <F3> <ESC>:setlocal spell spelllang=en_us<CR>
 inoremap hj <RIGHT>,<SPACE>
 inoremap jh ,<LEFT>
 inoremap JH <ESC>o,<LEFT>
@@ -207,9 +210,14 @@ inoremap jk <ESC>jA
 inoremap kj <ESC>l
 inoremap KK <ESC>jo
 inoremap HH <SPACE><SPACE><LEFT>
-inoremap <F1> <ESC>:edit $MYVIMRC<CR>
-inoremap <F2> <ESC>:source $MYVIMRC<CR>
-inoremap <F3> <ESC>:setlocal spell spelllang=en_us<CR>
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+inoremap { {}<LEFT>
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
+inoremap ` ``<LEFT>
+inoremap <leader>' '
+inoremap <leader>" "
 inoremap <leader>a <ESC>la
 inoremap <leader>A <ESC>A
 inoremap <leader>b <ESC>:buffers<CR>
