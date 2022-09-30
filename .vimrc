@@ -446,12 +446,12 @@ augroup END
 augroup filetype_html
   autocmd!
   autocmd FileType html set nowrap
-  autocmd FileType html nnoremap <buffer> <leader>t :0read ~/.vim/templates/skeleton.html<CR>
+  autocmd FileType html nnoremap <buffer> <leader>t :0read ~/.vim/templates/html/skeleton.html<CR>
   autocmd FileType html nnoremap <buffer> <leader>x I<!--<ESC>A--><ESC>
   autocmd FileType html nnoremap <buffer> <leader>z ^xxxx$xxx
   autocmd FileType html inoremap <buffer> <leader>c <!--  --><ESC>F i
   autocmd FileType html inoremap <buffer> <leader>, <ESC>A></<C-X><C-O><ESC>F<i
-  autocmd FileType html inoremap <buffer> <leader>. ><ESC>o<C-D></<C-X><C-O><ESC>O
+  autocmd FileType html inoremap <buffer> <leader>. <ESC>A><ESC>o<C-D></<C-X><C-O><ESC>O
   autocmd FileType html inoremap <buffer> <leader>/ </<C-X><C-O><ESC>
   autocmd FileType html inoremap <buffer> <leader>m <ESC>A /><ESC>
   autocmd FileType html inoremap <buffer> <leader>= =""<LEFT>
