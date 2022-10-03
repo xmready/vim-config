@@ -7,7 +7,7 @@
 #   A script to install vim and configure it with vim-config.
 #
 # Non-root usage:
-#   wget --quiet -O- https://raw.githubusercontent.com/xmready/vim-config/main/vim-config.sh | bash -
+#   wget --quiet -O- https://raw.githubusercontent.com/xmready/vim-config/main/setup-vim.sh | bash -
 
 VIMRC=https://raw.githubusercontent.com/xmready/vim-config/main/.vimrc
 VIMRCROOT=https://raw.githubusercontent.com/xmready/vim-config/main/.vimrc-root
