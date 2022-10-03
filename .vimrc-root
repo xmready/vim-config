@@ -9,7 +9,6 @@ let mapleader = ","
 
 " Global Options ----------------------{{{
 set autoread
-set cursorcolumn
 set cursorline
 set expandtab
 set hidden
