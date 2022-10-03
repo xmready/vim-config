@@ -52,7 +52,7 @@ echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
   | sudo tee -a "$SOURCES" \
 && echo -e "\n$(tput setaf 2)NodeSource repo added\n$(tput sgr0)" \
 && sleep 3 \
-echo -e "\n$(tput setaf 3)installing nodejs\n$(tput sgr0)" \
+&& echo -e "\n$(tput setaf 3)installing nodejs\n$(tput sgr0)" \
 && sudo apt update \
 && sudo apt install -y nodejs \
 && sudo -v \
