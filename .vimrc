@@ -230,7 +230,7 @@ inoremap <leader>d <ESC>I<C-D><ESC>
 inoremap <leader>D <ESC>^d0
 inoremap <leader>E <ESC>:edit<SPACE>
 inoremap <leader>e <ESC>g_i
-inoremap <leader>f <ESC>:xall<CR>
+inoremap <leader>f <C-X><C-F>
 inoremap <leader>X <ESC>ggVGc
 nnoremap <leader>g <ESC>:buffer<SPACE>
 inoremap <leader>I <ESC>I
@@ -465,6 +465,7 @@ augroup filetype_html
   autocmd FileType html inoremap <buffer> <leader>/ </<C-X><C-O><ESC>
   autocmd FileType html inoremap <buffer> <leader>m <ESC>A /><ESC>
   autocmd FileType html inoremap <buffer> <leader>= =""<LEFT>
+  autocmd FileType html inoremap <buffer> <leader>< < /><LEFT><LEFT><LEFT>
   autocmd FileType html inoremap <buffer> < <><LEFT>
   autocmd FileType html vnoremap <buffer> <leader>x c<!--<CR>--><ESC>P
   autocmd FileType html vnoremap <buffer> <leader>z :g/--/d<CR>
