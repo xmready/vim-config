@@ -17,7 +17,7 @@ YCMCOMPILE=https://raw.githubusercontent.com/xmready/vim-config/main/ycmcompile.
 PGPURL=https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 KEYRING=/usr/share/keyrings/nodesource.gpg
 REPOURL=https://deb.nodesource.com
-VERSION=node_16.x
+VERSION=node_19.x
 DISTRO="$(lsb_release -s -c)"
 SOURCES=/etc/apt/sources.list.d/nodesource.list
 
