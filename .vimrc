@@ -58,7 +58,7 @@ let g:gitgutter_signs = 0
 nnoremap <F8> :GitGutterSignsToggle<CR>
 nmap <leader>, <Plug>(GitGutterStageHunk)
 nmap <leader>. <Plug>(GitGutterUndoHunk)
-nnoremap <leader>F :GitGutterFold<CR>gg
+nnoremap <leader>f :GitGutterFold<CR>gg
 " }}}
 
 " fern.vim ----------------------{{{
@@ -168,7 +168,7 @@ nnoremap <leader>d I<C-D><ESC>
 nnoremap <leader>D ^d0
 nnoremap <leader>E :edit<SPACE>
 nnoremap <leader>e g_i
-nnoremap <leader>f :xall<CR>
+nnoremap <leader>F :xall<CR>
 nnoremap <leader>g :buffer<SPACE>
 nnoremap <leader>h :split<SPACE>
 nnoremap <leader>H :split<CR>
