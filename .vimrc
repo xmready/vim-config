@@ -109,6 +109,7 @@ set listchars+=space:_,tab:>~
 set mouse=a
 set noerrorbells
 set noshowmode
+set nowrap
 set number
 set scrolloff=4
 set shiftwidth=2
@@ -444,7 +445,6 @@ augroup END
 augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
-  autocmd FileType vim setlocal nowrap
   autocmd FileType vim nnoremap <buffer> <leader>x I"<ESC>
   autocmd FileType vim nnoremap <buffer> <leader>z ^x
   autocmd FileType vim inoremap <buffer> <leader>c "<SPACE>
@@ -454,7 +454,6 @@ augroup END
 
 augroup filetype_html
   autocmd!
-  autocmd FileType html set nowrap
   autocmd FileType html nnoremap <buffer> <leader>t :0read ~/.vim/templates/html/skeleton.html<CR>
   autocmd FileType html nnoremap <buffer> <leader>x I<!-- <ESC>A --><ESC>
   autocmd FileType html nnoremap <buffer> <leader>z ^xxxxx$xxxx
@@ -474,7 +473,6 @@ augroup END
 augroup filetype_css
   autocmd!
   autocmd FileType css setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-  autocmd FileType css setlocal nowrap
   autocmd FileType css nnoremap <buffer> <leader>x I/* <ESC>A */<ESC>
   autocmd FileType css nnoremap <buffer> <leader>z ^xxx$xxx
   autocmd FileType css nnoremap <buffer> <leader>m A;<ESC>
@@ -489,7 +487,6 @@ augroup END
 augroup filetype_javascript
   autocmd!
   autocmd FileType javascript setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-  autocmd FileType javascript setlocal nowrap
   autocmd FileType javascript nnoremap <F4> :execute '!cp -R $HOME/.vim/templates/js/. .' \| !npm install eslint prettier --save-dev<CR>
   autocmd FileType javascript nnoremap <buffer> <leader>x I// <ESC>
   autocmd FileType javascript nnoremap <buffer> <leader>z ^xxx
