@@ -9,10 +9,6 @@
 # Non-root usage:
 #   wget --quiet -O- https://raw.githubusercontent.com/xmready/vim-config/main/setup-vim.sh | bash -
 
-VIMRC=https://raw.githubusercontent.com/xmready/vim-config/main/.vimrc
-VIMRCROOT=https://raw.githubusercontent.com/xmready/vim-config/main/.vimrc-root
-PLUGVIM=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-SKELHTML=https://raw.githubusercontent.com/xmready/vim-config/main/.vim/templates/html/skeleton.html
 YCMCOMPILE=https://raw.githubusercontent.com/xmready/vim-config/main/ycmcompile.sh
 PGPURL=https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 KEYRING=/usr/share/keyrings/nodesource.gpg
@@ -28,19 +24,10 @@ echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
   openjdk-17-jdk openjdk-17-jre python3-dev vim-nox \
 && echo -e "\n$(tput setaf 2)Vim installed\n$(tput sgr0)" \
 && sleep 3 \
-&& echo -e "\n$(tput setaf 3)configuring Vim\n$(tput sgr0)" \
-&& mkdir -p ~/.vim/swap \
-&& mkdir -p ~/.vim/autoload \
-&& mkdir -p ~/.vim/templates/html \
-&& mkdir -p ~/.vim/templates/js \
-&& mkdir -p ~/.vim/templates/ts \
-&& curl -fLo ~/.vimrc "$VIMRC" \
-&& sudo curl -fLo /root/.vimrc "$VIMRCROOT" \
-&& curl -fLo ~/.vim/autoload/plug.vim "$PLUGVIM" \
-&& curl -fLo ~/.vim/templates/html/skeleton.html "$SKELHTML" \
+&& echo -e "\n$(tput setaf 3)install ycmcompile script\n$(tput sgr0)" \
 && sudo curl -fLo /usr/local/bin/ycmcompile "$YCMCOMPILE" \
 && sudo chmod +x /usr/local/bin/ycmcompile \
-&& echo -e "\n$(tput setaf 2)Vim configured\n$(tput sgr0)" \
+&& echo -e "\n$(tput setaf 2)ycmcompile installed\n$(tput sgr0)" \
 && sleep 3 \
 && echo -e "\n$(tput setaf 3)adding NodeSource repo\n$(tput sgr0)" \
 && curl -fL "$PGPURL" \
