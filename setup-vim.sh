@@ -16,6 +16,7 @@ REPOURL=https://deb.nodesource.com
 VERSION=node_19.x
 DISTRO="$(lsb_release -s -c)"
 SOURCES=/etc/apt/sources.list.d/nodesource.list
+GITURL=https://github.com/xmready/vim-config.git
 
 echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
 && sudo apt update \
@@ -43,4 +44,11 @@ echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
 && sudo apt update \
 && sudo apt install -y nodejs \
 && sudo -v \
-&& echo -e "\n$(tput setaf 2)nodejs installed\n$(tput sgr0)"
+&& echo -e "\n$(tput setaf 2)nodejs installed\n$(tput sgr0)" \
+&& sleep 3 \
+&& echo -e "\n$(tput setaf 3)configuring vim\n$(tput sgr0)" \
+&& mkdir ~/.var/git \
+&& git clone "$GITURL" ~/.var/git/ \
+&& ln -s ~/.var/git/vim-config/.vimrc ~/.vimrc \
+&& ln -s ~/.var/git/vim-config/.vim/ ~/.vim \
+&& echo -e "\n$(tput setaf 2)vim configured\n$(tput sgr0)"
