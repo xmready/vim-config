@@ -47,8 +47,8 @@ echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
 && echo -e "\n$(tput setaf 2)nodejs installed\n$(tput sgr0)" \
 && sleep 3 \
 && echo -e "\n$(tput setaf 3)configuring vim\n$(tput sgr0)" \
-&& mkdir ~/.var/git \
-&& git clone "$GITURL" ~/.var/git/ \
+&& mkdir -p ~/.var/git/vim-config \
+&& git clone "$GITURL" ~/.var/git/vim-config/ \
 && ln -s ~/.var/git/vim-config/.vimrc ~/.vimrc \
 && ln -s ~/.var/git/vim-config/.vim/ ~/.vim \
 && echo -e "\n$(tput setaf 2)vim configured\n$(tput sgr0)"
