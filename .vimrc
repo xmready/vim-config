@@ -507,16 +507,15 @@ augroup END
 " css {{{
 augroup filetype_css
   autocmd!
-  autocmd FileType css nnoremap <buffer> gz :silent! normal! k<CR>]/V[/:silent! s/\zs\/\=\*\{1,2} *\ze\S\{2,}\\|\S\+\zs *\*\/\ze/<CR>`<V`>:silent! g/\/\*\{1,2}\\|\*\//d<CR>`<^:nohlsearch<CR>
-  autocmd FileType css nnoremap <buffer> <Leader>, A;<Esc>
-  autocmd FileType css nnoremap <buffer> <Leader>. A<Space>{<CR>}<Esc>O
-  autocmd FileType css nnoremap <buffer> <Leader><CR> o;<Left>
-  autocmd FileType css inoremap <buffer> <Leader>, <Esc>^yg_S;<Left><C-R>0
-  autocmd FileType css inoremap <buffer> <Leader>. <C-O>A<Space>{<CR>}<C-O>O
-  autocmd FileType css inoremap <buffer> <Leader><CR> <C-O>o;<Left>
-  autocmd FileType css inoremap <buffer> <Leader>= =""<Left>
-  autocmd FileType css vnoremap <buffer> gb c/*<CR>/<C-D><Esc>P
-  autocmd FileType css vnoremap <buffer> gx <Esc>`<^i/* <C-O>`> */<Esc>
-  autocmd FileType css vnoremap <buffer> gz :silent! s/\zs\/\=\* *\ze\S\{2,}\\|\S\+\zs *\*\/\ze/<CR>`<V`>:silent! g/\/\*\{1,2}\\|\*\//d<CR>`<^:nohlsearch<CR>
+  autocmd FileType css,scss nnoremap <buffer> gz :silent! normal! k<CR>]/V[/:silent! s/\zs\/\=\*\{1,2} *\ze\S\{2,}\\|\S\+\zs *\*\/\ze/<CR>`<V`>:silent! g/\/\*\{1,2}\\|\*\//d<CR>`<^:nohlsearch<CR>
+  autocmd FileType css,scss nnoremap <buffer> <Leader>, A;<Esc>
+  autocmd FileType css,scss nnoremap <buffer> <Leader>. A<Space>{<CR>}<Esc>O
+  autocmd FileType css,scss nnoremap <buffer> <Leader><CR> o;<Left>
+  autocmd FileType css,scss inoremap <buffer> <Leader>, <Esc>^yg_S;<Left><C-R>0
+  autocmd FileType css,scss inoremap <buffer> <Leader>. <C-O>A<Space>{<CR>}<C-O>O
+  autocmd FileType css,scss inoremap <buffer> <Leader>= =""<Left>
+  autocmd FileType css,scss vnoremap <buffer> gb c/*<CR>/<C-D><Esc>P
+  autocmd FileType css,scss vnoremap <buffer> gx <Esc>`<^i/* <C-O>`> */<Esc>
+  autocmd FileType css,scss vnoremap <buffer> gz :silent! s/\zs\/\=\* *\ze\S\{2,}\\|\S\+\zs *\*\/\ze/<CR>`<V`>:silent! g/\/\*\{1,2}\\|\*\//d<CR>`<^:nohlsearch<CR>
 augroup END
 " }}}
