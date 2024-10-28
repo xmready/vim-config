@@ -15,10 +15,8 @@ get_latest_release() {
   sed -E 's/.*"([^"]+)".*/\1/'
 }
 
-NVM_LATEST="$(get_latest_release nvm-sh/nvm)"
-NVM_URL=https://raw.githubusercontent.com/nvm-sh/nvm/"$NVM_LATEST"/install.sh
 YCM_COMPILE=https://raw.githubusercontent.com/xmready/vim-config/main/ycm-compile.sh
-GIT_URL=https://github.com/xmready/vim-config.git
+GITHUB_URL=https://github.com/xmready/vim-config.git
 PLUG_URL=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 NERD_LATEST="$(get_latest_release ryanoasis/nerd-fonts)"
 DEJA_URL=https://github.com/ryanoasis/nerd-fonts/releases/download/"$NERD_LATEST"/DejaVuSansMono.tar.xz
@@ -26,19 +24,18 @@ FIRA_URL=https://github.com/ryanoasis/nerd-fonts/releases/download/"$NERD_LATEST
 HACK_URL=https://github.com/ryanoasis/nerd-fonts/releases/download/"$NERD_LATEST"/Hack.tar.xz
 JET_URL=https://github.com/ryanoasis/nerd-fonts/releases/download/"$NERD_LATEST"/JetBrainsMono.tar.xz
 
-echo -e "\n$(tput setaf 3)installing Nodejs\n$(tput sgr0)" \
-&& curl -fL "$NVM_URL" \
-  | bash \
-&& nvm install node \
-&& node -v \
-&& npm -v \
-&& echo -e "\n$(tput setaf 2)Nodejs installed\n$(tput sgr0)" \
-&& sleep 3 \
-&& echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
-&& sudo apt update \
-&& sudo apt install -y \
-  curl build-essential cmake golang mono-complete \
-  openjdk-17-jdk openjdk-17-jre python3-dev vim-nox \
+echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
+&& sudo apt-get update \
+&& sudo apt-get install \
+  build-essential \
+  cmake \
+  curl \
+  golang \
+  mono-complete \
+  openjdk-17-jdk \
+  openjdk-17-jre \
+  python3-dev \
+  vim-nox \
 && echo -e "\n$(tput setaf 2)Vim installed\n$(tput sgr0)" \
 && sleep 3 \
 && echo -e "\n$(tput setaf 3)install ycmcompile script\n$(tput sgr0)" \
@@ -47,7 +44,7 @@ echo -e "\n$(tput setaf 3)installing Nodejs\n$(tput sgr0)" \
 && echo -e "\n$(tput setaf 2)ycmcompile installed\n$(tput sgr0)" \
 && sleep 3 \
 && echo -e "\n$(tput setaf 3)configuring Vim\n$(tput sgr0)" \
-&& git clone "$GIT_URL" ~/.vim/ \
+&& git clone "$GITHUB_URL" ~/.vim/ \
 && ln -s ~/.vim/.vimrc ~/.vimrc \
 && curl -fLo ~/.vim/autoload/plug.vim --create-dirs "$PLUG_URL" \
 && mkdir -p ~/.local/share/fonts \
