@@ -8,6 +8,7 @@ let mapleader = ','
 " }}}
 
 " global option settings {{{
+set autoindent
 set autoread
 set background=dark
 set breakindent
@@ -491,18 +492,18 @@ augroup END
 augroup filetype_html
   autocmd!
   autocmd BufNewFile *.html 0r ~/.vim/templates/html/skeleton.html
-  autocmd FileType html nnoremap <buffer> gz :silent! normal! k<CR>/--><CR>V%:silent! s/\zs<!-- *\ze\S\+\\|\S\+\zs *-->\ze/<CR>`<V`>:silent! g/<!--\\|-->/d<CR>`<^:nohlsearch<CR>
-  autocmd FileType html nnoremap <buffer> <Leader>T :0read ~/.vim/templates/html/skeleton.html<CR>
-  autocmd FileType html nnoremap <buffer> <Leader>, A</<C-X><C-O><Esc>F<i
-  autocmd FileType html nnoremap <buffer> <Leader>. A<C-O>o<C-D></<C-X><C-O><Esc>O
-  autocmd FileType html nnoremap <buffer> <Leader>/ A</<C-X><C-O><Esc>F<i<CR>
-  autocmd FileType html inoremap <buffer> <Leader>, <C-O>A</<C-X><C-O><Esc>F<i
-  autocmd FileType html inoremap <buffer> <Leader>. <C-O>A<C-O>o<C-D></<C-X><C-O><Esc>O
-  autocmd FileType html inoremap <buffer> <Leader>/ <C-O>A</<C-X><C-O><Esc>F<i<CR>
-  autocmd FileType html inoremap <buffer> <Leader>= =""<Left>
-  autocmd FileType html vnoremap <buffer> gb c<!--<CR>--><Esc>P
-  autocmd FileType html vnoremap <buffer> gx <Esc>`<^i<!-- <C-O>`> --><Esc>
-  autocmd FileType html vnoremap <buffer> gz :silent! s/\zs<!-- *\ze\S\+\\|\S\+\zs *-->\ze/<CR>`<V`>:silent! g/<!--\\|-->/d<CR>`<^:nohlsearch<CR>
+  autocmd FileType html,htmlangular nnoremap <buffer> gz :silent! normal! k<CR>/--><CR>V%:silent! s/\zs<!-- *\ze\S\+\\|\S\+\zs *-->\ze/<CR>`<V`>:silent! g/<!--\\|-->/d<CR>`<^:nohlsearch<CR>
+  autocmd FileType html,htmlangular nnoremap <buffer> <Leader>T :0read ~/.vim/templates/html/skeleton.html<CR>
+  autocmd FileType html,htmlangular nnoremap <buffer> <Leader>, A</<C-X><C-O><C-O><Esc>F<i
+  autocmd FileType html,htmlangular nnoremap <buffer> <Leader>. A<C-O>o</<C-X><C-O><C-O><Esc>O
+  autocmd FileType html,htmlangular nnoremap <buffer> <Leader>/ A</<C-X><C-O><Esc>F<i<CR>
+  autocmd FileType html,htmlangular inoremap <buffer> <Leader>, <C-O>A</<C-X><C-O><Esc>F<i
+  autocmd FileType html,htmlangular inoremap <buffer> <Leader>. <C-O>A<C-O>o</<C-X><C-O><C-O><Esc>O
+  autocmd FileType html,htmlangular inoremap <buffer> <Leader>/ <C-O>A</<C-X><C-O><Esc>F<i<CR>
+  autocmd FileType html,htmlangular inoremap <buffer> <Leader>= =""<Left>
+  autocmd FileType html,htmlangular vnoremap <buffer> gb c<!--<CR>--><Esc>P
+  autocmd FileType html,htmlangular vnoremap <buffer> gx <Esc>`<^i<!-- <C-O>`> --><Esc>
+  autocmd FileType html,htmlangular vnoremap <buffer> gz :silent! s/\zs<!-- *\ze\S\+\\|\S\+\zs *-->\ze/<CR>`<V`>:silent! g/<!--\\|-->/d<CR>`<^:nohlsearch<CR>
 augroup END
 " }}}
 
