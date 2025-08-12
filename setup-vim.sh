@@ -26,7 +26,7 @@ JET_URL=https://github.com/ryanoasis/nerd-fonts/releases/download/"$NERD_LATEST"
 
 echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
 && sudo apt-get update \
-&& sudo apt-get install \
+&& sudo apt-get install -y \
   build-essential \
   cmake \
   curl \
