@@ -32,8 +32,8 @@ echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
   curl \
   golang \
   mono-complete \
-  openjdk-17-jdk \
-  openjdk-17-jre \
+  openjdk-21-jdk \
+  openjdk-21-jre \
   python3-dev \
   vim-nox \
 && echo -e "\n$(tput setaf 2)Vim installed\n$(tput sgr0)" \
