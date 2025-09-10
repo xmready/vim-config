@@ -8,12 +8,14 @@ let mapleader = ','
 " }}}
 
 " global option settings {{{
+set autoindent
 set autoread
 set background=dark
 set breakindent
 set completeopt=popup,menuone
 set cursorcolumn
 set cursorline
+set encoding=utf-8
 set expandtab
 set formatoptions+=j
 set history=1000
@@ -32,6 +34,7 @@ set shortmess+=FA
 set smartcase
 set splitright
 set splitbelow
+set sessionoptions-=options
 set switchbuf=usetab
 set tabstop=2
 set termguicolors
@@ -48,7 +51,6 @@ set wildmode=longest,full
 " }}}
 
 " global normal maps {{{
-nnoremap <Tab> %
 nnoremap <PageUp> :bprevious<CR>
 nnoremap <PageDown> :bnext<CR>
 nnoremap <C-D> <C-D>zz
@@ -57,10 +59,6 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 nnoremap <C-K> <C-W>k
 nnoremap <C-J> <C-W>j
-nnoremap <Left> 5<C-W><
-nnoremap <Right> 5<C-W>>
-nnoremap <Up> 5<C-W>+
-nnoremap <Down> 5<C-W>-
 nnoremap <Space> :
 nnoremap : ,
 nnoremap K i<CR><Esc>
@@ -68,11 +66,9 @@ nnoremap za zazz
 nnoremap zR zRgg
 nnoremap zM zMzz
 nnoremap <Leader><Esc> :mksession!<CR>:xall<CR>
-nnoremap <Leader>c :terminal ++close ++norestore<CR>
-nnoremap <Leader>C ggcG
 nnoremap <Leader>d ^d0
 nnoremap <Leader>D ggdG
-nnoremap <Leader>H :split<Space>
+nnoremap <Leader>h :split<Space>
 nnoremap <Leader>i ciw
 nnoremap <Leader>I ciW
 nnoremap <Leader>j Go<CR>
@@ -90,10 +86,10 @@ nnoremap <Leader>Q :confirm qall<CR>
 nnoremap <Leader>r <C-R>
 nnoremap <Leader>R :%s/
 nnoremap <Leader>s :write<CR>
+nnoremap <Leader>t :terminal ++close ++norestore<CR>
 nnoremap <Leader>u u
 nnoremap <Leader>U :undo0<CR>
-nnoremap <Leader>v ^vg_
-nnoremap <Leader>V :vsplit<Space>
+nnoremap <Leader>v :vsplit<Space>
 nnoremap <Leader>w :bdelete<CR>
 nnoremap <Leader>W :bwipeout<CR>
 nnoremap <Leader>z g_i
