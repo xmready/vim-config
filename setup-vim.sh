@@ -7,7 +7,7 @@
 #   A script to install vim and configure it with vim-config.
 #
 # Non-root usage:
-#   wget -O- https://raw.githubusercontent.com/xmready/vim-config/main/setup-vim.sh | bash -
+#   curl -fL https://raw.githubusercontent.com/xmready/vim-config/main/setup-vim.sh | bash -
 
 get_latest_release() {
   curl --silent "https://api.github.com/repos/$1/releases/latest" |
@@ -17,6 +17,7 @@ get_latest_release() {
 
 YCM_COMPILE=https://raw.githubusercontent.com/xmready/vim-config/main/ycm-compile.sh
 GITHUB_URL=https://github.com/xmready/vim-config.git
+VIMRC_ROOT_URL=https://raw.githubusercontent.com/xmready/vim-config/main/.vimrc-root
 PLUG_URL=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 NERD_LATEST="$(get_latest_release ryanoasis/nerd-fonts)"
 DEJA_URL=https://github.com/ryanoasis/nerd-fonts/releases/download/"$NERD_LATEST"/DejaVuSansMono.tar.xz
@@ -46,6 +47,7 @@ echo -e "\n$(tput setaf 3)installing Vim\n$(tput sgr0)" \
 && echo -e "\n$(tput setaf 3)configuring Vim\n$(tput sgr0)" \
 && git clone "$GITHUB_URL" ~/.vim/ \
 && ln -s ~/.vim/.vimrc ~/.vimrc \
+&& sudo curl -fLo /root/.vimrc "$VIMRC_ROOT_URL" \
 && curl -fLo ~/.vim/autoload/plug.vim --create-dirs "$PLUG_URL" \
 && mkdir -p ~/.local/share/fonts \
 && curl -fL "$DEJA_URL" | tar -xJ -C ~/.local/share/fonts \
