@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # Discussion, issues and change requests at:
-#   https://github.com/xmready/system-setup
+#   https://github.com/xmready/vim-config
 #
 # Purpose:
 #   A script to create custom .vimrc for servers
