@@ -7,7 +7,7 @@
 #   A script to install vim and configure it with vim-config.
 #
 # Non-root usage:
-#   curl -fL https://raw.githubusercontent.com/xmready/vim-config/main/setup-vim.sh | bash -
+#   curl -fL https://raw.githubusercontent.com/xmready/vim-config/main/setup-desktop-vim.sh | bash -
 
 get_latest_release() {
   curl --silent "https://api.github.com/repos/$1/releases/latest" |
