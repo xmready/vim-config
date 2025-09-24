@@ -361,7 +361,7 @@ let g:airline_section_z = '%p%% %l/%L : %c'
 
 " vim-fugitive {{{
 nnoremap <Leader>f :0Git<CR>
-nnoremap <Leader>F :Gvdiffsplit!<CR>
+nnoremap <Leader>F :Gdiffsplit!<CR>
 nnoremap <Leader>S :Gwrite<CR>
 " }}}
 
