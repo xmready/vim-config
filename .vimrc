@@ -396,7 +396,7 @@ Plug 'airblade/vim-rooter'
 Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
 Plug 'github/copilot.vim'
-Plug 'instant-markdown/vim-instant-markdown', { 'for': 'markdown' }
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'npm install'}
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
